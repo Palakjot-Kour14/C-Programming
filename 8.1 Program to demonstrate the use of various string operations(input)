@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char str1[50], str2[20], temp[50];
+    printf("Enter the string :");
+    scanf("%s", str1);
+    printf("Enter the second string :");
+    scanf("%s", str2);
+    printf("\n string length :\n");
+    printf("length of string 1:%lu\n", strlen(str1));
+    printf("Length of string 2:%lu\n", strlen(str2));
+    printf("\n2. string copy:\n");
+    strcpy(temp, str1);
+    printf("Concatenated string :%s\n", temp);
+    printf("\n3.string concatenation :\n");
+    strcat(temp, str2);
+    printf("concatenated string:%s\n", temp);
+    printf("\n4. string comparison:\n");
+    if (strcmp(str1, str2) == 0)
+        printf("string 1 and string 2 are equal\n");
+    else
+        printf("string 1 and string 2are not equal\n");
+    printf("\n5. string searching:\n");
+    char substring[20];
+    printf("Enter a substring to search:");
+    scanf("%s", substring);
+    if (strstr(str1, substring) != NULL)
+    {
+        printf("%s is present in%s\n", substring, str1);
+    }
+    else
+    {
+        printf("%s is not present in%s\n");
+    }
+}
