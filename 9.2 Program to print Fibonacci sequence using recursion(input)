@@ -1,0 +1,30 @@
+// fibonacci series using recursion
+#include <stdio.h>
+int fibanacci(int);
+int main()
+{
+    int n, r;
+    printf("Enter the number of terms in the Fibonacci sequence: ");
+    scanf("%d", &n);             // to define n value
+    for (int i = 1; i <= n; i++) // 0<=5
+    {
+        r = fibanacci(i); // function calling
+        printf("\n%d", r);
+    }
+}
+int fibanacci(int n)
+{
+    if (n == 1) // 5==1 false condition then goes to else block then 5-1=4
+    {
+        return 0;
+    }
+    else if (n == 2) // function defintion  ; 5==2
+    {
+        return 1;
+    }
+    else
+    {
+        return fibanacci(n - 1) + fibanacci(n - 2);
+    }
+}
+
